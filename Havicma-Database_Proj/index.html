@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Driver Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            background: #333;
+            color: white;
+            border: 0;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Driver Application Form</h2>
+        <form action="submit_application.php" method="post" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="fullLegalName">Full Legal Name:</label>
+            <input type="text" id="fullLegalName" name="fullLegalName" required>
+
+            <label for="legalBusinessName">Legal Business Name:</label>
+            <input type="text" id="legalBusinessName" name="legalBusinessName">
+
+            <label for="ssn">SSN:</label>
+            <input type="text" id="ssn" name="ssn" required>
+
+            <label for="activationCode">Activation Code:</label>
+            <input type="text" id="activationCode" name="activationCode" required>
+
+            <label for="sourceApp">Source App:</label>
+            <input type="text" id="sourceApp" name="sourceApp" required>
+
+            <label for="driverAccountActivation">Driver Account Activation:</label>
+            <input type="text" id="driverAccountActivation" name="driverAccountActivation" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="homeAddress">Home Address:</label>
+            <input type="text" id="homeAddress" name="homeAddress" required>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required>
+
+            <label for="isAdult">Are you 18 years or older with a valid driver's license?</label>
+            <input type="radio" id="isAdultYes" name="isAdult" value="1" required> Yes
+            <input type="radio" id="isAdultNo" name="isAdult" value="0"> No
+
+            <label for="typeOfService">Type of Service:</label>
+            <input type="text" id="typeOfService" name="typeOfService" required>
+
+            <label for="vehicleMake">Vehicle Make:</label>
+            <input type="text" id="vehicleMake" name="vehicleMake" required>
+
+            <label for="vehicleModel">Vehicle Model:</label>
+            <input type="text" id="vehicleModel" name="vehicleModel" required>
+
+            <label for="vehicleYear">Vehicle Year:</label>
+            <input type="number" id="vehicleYear" name="vehicleYear" required>
+
+            <label for="termsAccepted">Terms and Conditions:</label>
+            <input type="checkbox" id="termsAccepted" name="termsAccepted" required> I accept the terms and conditions
+
+            <label for="backgroundCheckRequired">Background Check Required:</label>
+            <input type="checkbox" id="backgroundCheckRequired" name="backgroundCheckRequired">
+
+            <label for="motorVehicleReportRequired">Motor Vehicle Report Required:</label>
+            <input type="checkbox" id="motorVehicleReportRequired" name="motorVehicleReportRequired">
+
+            <label for="drugScreenRequired">Drug Screen Required:</label>
+            <input type="checkbox" id="drugScreenRequired" name="drugScreenRequired">
+
+            <label for="wishToContinue">Do you wish to continue?</label>
+            <input type="radio" id="wishToContinueYes" name="wishToContinue" value="1" required> Yes
+            <input type="radio" id="wishToContinueNo" name="wishToContinue" value="0"> No
+
+            <label for="joinAs">Do you plan to join Buzz&Move as an individual or as a business?</label>
+            <input type="radio" id="joinAsIndividual" name="joinAs" value="Individual" required> Individual
+            <input type="radio" id="joinAsBusiness" name="joinAs" value="Business"> Business
+
+            <label for="usDotNumber">US DOT Number:</label>
+            <input type="text" id="usDotNumber" name="usDotNumber" required>
+
+            <label for="mcNumber">MC Number:</label>
+            <input type="text" id="mcNumber" name="mcNumber" required>
+
+            <label for="shortScrollableTerms">Short Scrollable Terms:</label>
+            <textarea id="shortScrollableTerms" name="shortScrollableTerms" required></textarea>
+
+            <label for="disclosureAuthorizationAgreement">Disclosure and Authorization Agreement:</label>
+            <textarea id="disclosureAuthorizationAgreement" name="disclosureAuthorizationAgreement" required></textarea>
+
+            <label for="signature">Signature:</label>
+            <textarea id="signature" name="signature" required></textarea>
+
+            <label for="driverLicenseNumber">Driver License Number:</label>
+            <input type="text" id="driverLicenseNumber" name="driverLicenseNumber" required>
+
+            <label for="issuingState">Issuing State:</label>
+            <input type="text" id="issuingState" name="issuingState" required>
+
+            <label for="dlFront">Driver License Front Photo:</label>
+            <input type="file" id="dlFront" name="dlFront">
+
+            <label for="dlBack">Driver License Reverse Photo:</label>
+            <input type="file" id="dlBack" name="dlBack">
+
+            <label for="policyExpirationDate">Policy Expiration Date:</label>
+            <input type="date" id="policyExpirationDate" name="policyExpirationDate">
+
+            <label for="insurancePolicy">Insurance Policy Declaration Page:</label>
+            <input type="file" id="insurancePolicy" name="insurancePolicy">
+
+            <label for="ein">EIN:</label>
+            <input type="text" id="ein" name="ein">
+
+            <label for="autoInsuranceProvider">Auto Insurance Provider:</label>
+            <input type="text" id="autoInsuranceProvider" name="autoInsuranceProvider" required>
+
+            <label for="confirmFullLegalName">Confirm Full Legal Name:</label>
+            <input type="text" id="confirmFullLegalName" name="confirmFullLegalName" required>
+
+            <label for="confirmLegalBusinessName">Confirm Legal Business Name:</label>
+            <input type="text" id="confirmLegalBusinessName" name="confirmLegalBusinessName">
+
+            <label for="todaysDate">Today's Date:</label>
+            <input type="date" id="todaysDate" name="todaysDate" required>
+
+            <label for="submissionIP">Submission IP:</label>
+            <input type="text" id="submissionIP" name="submissionIP" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>" readonly>
+
+            <!-- Hidden input to capture LastUpdateDate -->
+            <input type="hidden" id="lastUpdateDate" name="lastUpdateDate" value="<?php echo date('Y-m-d'); ?>">
+
+            <!-- Hidden input to capture SubmissionDate -->
+            <input type="hidden" id="submissionDate" name="submissionDate" value="<?php echo date('Y-m-d'); ?>">
+
+            <!-- Hidden input to capture ApprovalStatus -->
+            <input type="hidden" id="approvalStatus" name="approvalStatus" value="Pending">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
+
